@@ -4,5 +4,69 @@
 		"name": "Projecte Gradle",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
-	"item": []
+	"item": [
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Servidor}}:{{Port}}/HelloWorld?nom=Joe Black",
+					"host": [
+						"{{Servidor}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"HelloWorld"
+					],
+					"query": [
+						{
+							"key": "nom",
+							"value": "Joe Black"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Servidor",
+			"value": "http://localhost",
+			"type": "default"
+		},
+		{
+			"key": "Port",
+			"value": "9001",
+			"type": "default"
+		}
+	]
 }

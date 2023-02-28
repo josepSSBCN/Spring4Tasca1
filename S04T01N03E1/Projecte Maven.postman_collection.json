@@ -4,5 +4,56 @@
 		"name": "Projecte Maven",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
-	"item": []
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Servidor}}:{{Port}}/HelloWorld",
+					"host": [
+						"{{Servidor}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"HelloWorld"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Servidor",
+			"value": "http://localhost",
+			"type": "default"
+		},
+		{
+			"key": "Port",
+			"value": "9000",
+			"type": "default"
+		}
+	]
 }
